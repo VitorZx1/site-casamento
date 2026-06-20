@@ -1129,7 +1129,7 @@ function Page({ onVerMais, onAjude, startIndex, setStartIndex }: PageProps) {
        
        {/* Imagem de fundo geral com opacidade */}
        <div 
-         className="absolute inset-0 h-full w-full bg-cover bg-center opacity-50 pointer-events-none mix-blend-overlay"
+         className="absolute inset-0 h-full w-full bg-cover bg-center opacity-50 pointer-events-none"
          style={{ backgroundImage: "url('/src/assets/campo-florido.png')" }}
        />
 
