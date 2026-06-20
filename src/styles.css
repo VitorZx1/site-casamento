@@ -1,0 +1,281 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@theme {
+  --color-bg: #f6f0e4;
+  --color-cream: #f6f0e4;
+  --color-cream-2: #ede4d1;
+  --color-ink: #1a1410;
+  --color-forest: #1f3526;
+  --color-forest-2: #16261b;
+  --color-forest-3: #0f1c14;
+  --color-gold: #c9a25a;
+  --color-gold-2: #e3c885;
+  --color-gold-3: #a07f3d;
+  --color-muted: #6b5a3e;
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+  --font-script: "Great Vibes", cursive;
+  --font-form: "Playfair Display", serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background: #f6f0e4;
+  color: #1a1410;
+  font-family: var(--font-body);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+.font-sans-x {
+  font-family: var(--font-sans);
+  letter-spacing: 0.2em;
+}
+.heading-serif {
+  font-family: "Playfair Display", "Cormorant Garamond", serif;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  font-style: italic;
+}
+.hero-names {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  line-height: 1.05;
+  background: linear-gradient(180deg, #f5e3b0 0%, #e3c885 45%, #c9a25a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 18px rgba(201, 162, 90, 0.18);
+  filter: drop-shadow(0 1px 0 rgba(20, 12, 4, 0.4));
+}
+.hero-amp {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  background: linear-gradient(180deg, #f5e3b0 0%, #e3c885 50%, #c9a25a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 0 rgba(20, 12, 4, 0.35));
+  transform: translateY(-0.05em);
+  display: inline-block;
+}
+.hero-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+.hero-ornament .line {
+  flex: 0 0 110px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a25a 50%, transparent);
+}
+.hero-ornament .diamond {
+  width: 8px;
+  height: 8px;
+  background: #c9a25a;
+  transform: rotate(45deg);
+  box-shadow: 0 0 10px rgba(201, 162, 90, 0.6);
+}
+.hero-eyebrow {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: rgba(246, 240, 228, 0.85);
+  line-height: 1.9;
+}
+
+.divider-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #c9a25a;
+}
+.divider-gold::before,
+.divider-gold::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #c9a25a, transparent);
+}
+
+.btn-gold {
+  background:
+    linear-gradient(180deg, #fde9b3 0%, #e3c885 25%, #c9a25a 50%, #a07f3d 75%, #8a6a30 100%),
+    linear-gradient(180deg, #d8b572, #a07f3d);
+  color: #2a1d05;
+  border: 1px solid #f0d28a;
+  border-radius: 999px;
+  padding: 0.75rem 2rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 246, 210, 0.85),
+    inset 0 -1px 0 rgba(110, 80, 25, 0.45),
+    inset 0 0 18px rgba(255, 220, 140, 0.35),
+    0 8px 24px -10px rgba(160, 127, 61, 0.75),
+    0 0 22px -6px rgba(255, 210, 120, 0.55);
+  text-shadow: 0 1px 0 rgba(255, 245, 210, 0.6);
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+.btn-gold::after {
+  
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 250, 220, 0.55) 50%,
+    transparent 100%
+  
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+  animation: goldShine 3s ease-in-out infinite;
+}
+.btn-gold:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05) saturate(1.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 246, 210, 0.9),
+    inset 0 -1px 0 rgba(110, 80, 25, 0.5),
+    inset 0 0 22px rgba(255, 220, 140, 0.45),
+    0 14px 34px -10px rgba(160, 127, 61, 0.85),
+    0 0 28px -4px rgba(255, 210, 120, 0.7);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: #e3c885;
+  border: 1px solid #c9a25a;
+  border-radius: 999px;
+  padding: 0.65rem 1.75rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+.btn-outline-gold:hover {
+  background: rgba(201, 162, 90, 0.12);
+}
+
+.section-title {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: #c9a25a;
+  position: sticky;
+  top: 0.5rem;
+  z-index: 40;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0.5rem 0;
+  display: inline-block;
+}
+
+.heading-serif {
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+
+.form-label {
+  font-family: var(--font-form) !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b89668;
+  display: inline-block;
+  border-bottom: 1px solid rgba(201, 162, 90, 0.3);
+  padding-bottom: 0.15rem;
+}
+
+/* Sticky title wrapper - fundo transparente, apenas o texto fica congelado */
+.sticky-title-wrapper {
+  position: sticky;
+  top: 0.5rem;
+  z-index: 40;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0.5rem 0;
+  display: block;
+  width: 100%;
+  pointer-events: none;
+}
+.sticky-title-wrapper > * {
+  pointer-events: auto;
+}
+.sticky-title-wrapper::before,
+.sticky-title-wrapper::after {
+  display: none !important;
+  content: none !important;
+}
+
+button,
+a,
+[role="button"],
+input[type="submit"],
+input[type="button"] {
+  cursor: pointer;
+}
+
+@keyframes goldShine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -50%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
