@@ -671,7 +671,7 @@ function Page({ onVerMais, onAjude, startIndex, setStartIndex }: PageProps) {
           <div
   className="absolute inset-0 h-full w-full bg-cover bg-center opacity-25 pointer-events-none"
   style={{
-    backgroundImage: `url(${campoFlorido})`
+    backgroundImage: `url(${campoFlorido})`,
   }}
 />
 
