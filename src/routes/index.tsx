@@ -430,17 +430,17 @@ function Page({ onVerMais, onAjude, startIndex, setStartIndex }: PageProps) {
          <div className="flex justify-center mb-6">
            <Heart className="h-3 w-3 text-gold" />
          </div>
-         <div className="mx-auto flex max-w-5xl items-center justify-center px-8 text-center">
+         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-y-6 px-4 text-center">
            {[
              { v: t.d, l: "DIAS" },
              { v: t.h, l: "HORAS" },
              { v: t.m, l: "MINUTOS" },
              { v: t.s, l: "SEGUNDOS" },
            ].map((x, i) => (
-             <div key={x.l} className="flex items-center gap-6">
+             <div key={x.l} className="flex items-center gap-3 md:gap-6">
                <div>
-                 <div 
-                   className="text-[#9C7A3E] text-6xl md:text-7xl leading-none lining-nums tabular-nums drop-shadow-[0_1px_2px_rgba(0,0,0,0.02)]"
+                 <div
+  className="text-[#9C7A3E] text-4xl sm:text-5xl md:text-7xl leading-none lining-nums tabular-nums drop-shadow-[0_1px_2px_rgba(0,0,0,0.02)]"
                    style={{ fontFamily: "'Playfair Display', 'Cormorant Garamond', serif", fontWeight: 400 }}
                  >
                    {String(x.v).padStart(2, "0")}
@@ -453,7 +453,7 @@ function Page({ onVerMais, onAjude, startIndex, setStartIndex }: PageProps) {
                  </div>
                </div>
                {i < 3 && (
-  <div className="mx-8 h-20 md:h-24 w-px bg-gold/20" />
+  <div className="mx-3 md:mx-8 h-14 md:h-24 w-px bg-gold/20" />
 )}
              </div>
            ))}
