@@ -810,8 +810,7 @@ function Page({ onVerMais, onAjude, startIndex, setStartIndex }) {
 						className: "bg-forest-2 text-cream p-10 md:p-12 flex flex-col relative overflow-hidden justify-center items-center",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 							className: "absolute inset-0 h-full w-full bg-cover bg-center opacity-25 pointer-events-none",
-							style: { backgroundImage: "url('/src/assets/campo-florido.png')" }
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							style={{ backgroundImage: `url(${campoFlorido})` }}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "relative z-10 flex flex-col h-full w-full justify-between",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "w-full flex flex-col items-center",
@@ -1288,8 +1287,7 @@ function Page({ onVerMais, onAjude, startIndex, setStartIndex }) {
 				style: { background: "linear-gradient(rgba(20,20,20,.95), rgba(10,10,10,.98))" },
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "absolute inset-0 h-full w-full bg-cover bg-center opacity-50 pointer-events-none mix-blend-overlay",
-					style: { backgroundImage: "url('/src/assets/campo-florido.png')" }
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					style={{ backgroundImage: `url(${campoFlorido})` }}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "relative z-10",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {

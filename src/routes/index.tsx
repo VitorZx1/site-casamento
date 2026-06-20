@@ -10,13 +10,11 @@ import g5 from "@/assets/g5.jpg";
 import finaleImg from "@/assets/finale.jpg";
 import monogramLogo from "@/assets/logo.png";
 import qrcodePix from "@/assets/qrcode-pix.png";
+import campoFlorido from "@/assets/campo-florido.png";
 
 // Importação das flores corretas para o contador e nova tela
 import florEsquerda from "@/assets/flor-esquerda.png";
 import florDireita from "@/assets/flor-direita.png";
-
-// Importação do Campo Florido para o fundo da história
-import campoFlorido from "@/assets/campo-florido.png";
 
 import aviao from '../assets/aviao.png';
 import anel from '../assets/anel.png';
@@ -668,8 +666,9 @@ function Page({ onVerMais, onAjude, startIndex, setStartIndex }: PageProps) {
         <div className="bg-forest-2 text-cream p-10 md:p-12 flex flex-col relative overflow-hidden justify-center items-center">
           
           {/* Imagem de fundo com opacidade em 50% (opacity-50) */}
-          <div
-  className="absolute inset-0 h-full w-full bg-cover bg-center opacity-25 pointer-events-none"
+          {/* Imagem de fundo geral com opacidade */}
+<div
+  className="absolute inset-0 h-full w-full bg-cover bg-center opacity-50 pointer-events-none"
   style={{
     backgroundImage: `url(${campoFlorido})`,
   }}
@@ -1130,7 +1129,7 @@ function Page({ onVerMais, onAjude, startIndex, setStartIndex }: PageProps) {
        {/* Imagem de fundo geral com opacidade */}
        <div 
          className="absolute inset-0 h-full w-full bg-cover bg-center opacity-50 pointer-events-none"
-         style={{ backgroundImage: "url('/src/assets/campo-florido.png')" }}
+         style={{ backgroundImage: `url(${campoFlorido})` }}
        />
 
        {/* O container z-10 mantém todo o conteúdo nítido */}
