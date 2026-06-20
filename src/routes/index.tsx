@@ -21,6 +21,10 @@ import campoFlorido from "@/assets/campo-florido.png";
 import aviao from '../assets/aviao.png';
 import anel from '../assets/anel.png';
 import coracao from '../assets/coracao.png';
+import luaDeMelImg from "@/assets/lua-de-mel.png";
+import jantarImg from "@/assets/jantar.png";
+import casaNovaImg from "@/assets/casa-nova.png";
+import outroImg from "@/assets/outro.png";
 
 export const Route = createFileRoute("/")({
  head: () => ({
@@ -1138,11 +1142,11 @@ function Page({ onVerMais, onAjude, startIndex, setStartIndex }: PageProps) {
 
          <div className="mx-auto mt-10 grid max-w-6xl grid-cols-2 gap-5 px-6 md:grid-cols-4">
            {[
-             { t: "LUA DE MEL", d: "Nos ajude a realizar nossa lua de mel dos sonhos", i: "case", img: "lua-de-mel.png" },
-             { t: "JANTAR ROMÂNTICO", d: "Um jantar especial para celebrarmos", i: "glass", img: "jantar.png" },
-             { t: "AJUDA PARA CASA NOVA", d: "Contribua para nossa vida juntos", i: "home", img: "casa-nova.png" },
-             { t: "OUTRO VALOR", d: "Escolha o valor que quiser nos presentear", i: "gift", img: "outro.png" },
-           ].map((c) => (
+  { t: "LUA DE MEL", d: "Nos ajude a realizar nossa lua de mel dos sonhos", i: "case", img: luaDeMelImg },
+  { t: "JANTAR ROMÂNTICO", d: "Um jantar especial para celebrarmos", i: "glass", img: jantarImg },
+  { t: "AJUDA PARA CASA NOVA", d: "Contribua para nossa vida juntos", i: "home", img: casaNovaImg },
+  { t: "OUTRO VALOR", d: "Escolha o valor que quiser nos presentear", i: "gift", img: outroImg },
+].map((c) => (
              <div 
                key={c.t} 
                className="relative overflow-hidden rounded-xl border border-gold/40 bg-black/40 p-6 text-center shadow-[0_10px_30px_rgba(0,0,0,0.15)] backdrop-blur-sm group hover:border-gold transition-all duration-300"
@@ -1150,7 +1154,7 @@ function Page({ onVerMais, onAjude, startIndex, setStartIndex }: PageProps) {
                {/* Imagem interna do card com opacidade controlada */}
                <div 
                  className="absolute inset-0 h-full w-full bg-cover bg-center opacity-100 group-hover:scale-110 transition-transform duration-700 pointer-events-none"
-                 style={{ backgroundImage: `url('/src/assets/${c.img.replace(/ /g, '-')}')` }}
+                 style={{ backgroundImage: `url(${c.img})` }}
                />
                
                {/* Camada interna para garantir a nitidez e leitura do texto */}
