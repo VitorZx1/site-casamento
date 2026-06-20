@@ -25,6 +25,7 @@ import luaDeMelImg from "@/assets/lua-de-mel.png";
 import jantarImg from "@/assets/jantar.png";
 import casaNovaImg from "@/assets/casa-nova.png";
 import outroImg from "@/assets/outro.png";
+import campoFlorido from "@/assets/campo-florido.png";
 
 export const Route = createFileRoute("/")({
  head: () => ({
@@ -667,10 +668,10 @@ function Page({ onVerMais, onAjude, startIndex, setStartIndex }: PageProps) {
         <div className="bg-forest-2 text-cream p-10 md:p-12 flex flex-col relative overflow-hidden justify-center items-center">
           
           {/* Imagem de fundo com opacidade em 50% (opacity-50) */}
-          <div 
-            className="absolute inset-0 h-full w-full bg-cover bg-center opacity-25 pointer-events-none"
-            style={{ backgroundImage: "url('/src/assets/campo-florido.png')" }}
-          />
+          <div
+  className="absolute inset-0 h-full w-full bg-cover bg-center opacity-25 pointer-events-none"
+  style={{ backgroundImage: `url(${campoFlorido})` }}
+/>
 
           {/* O container z-10 garante que o texto e os ícones fiquem 100% nítidos na frente */}
           <div className="relative z-10 flex flex-col h-full w-full justify-between">
